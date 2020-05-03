@@ -1,0 +1,38 @@
+site:
+  about:
+    siteName: Vitrail Documentation
+    siteDescription: Documentation for the Vitrail kotlin library
+Editorial:
+  primaryColor: '#DE9149'
+  legacySearch: false
+  social:
+    github: 'jlandic/vitrail'
+  metaComponents:
+    - type: 'orchidSearch'
+  menu:
+    - type: 'page'
+      itemId: 'Changelog'
+    - type: 'separator'
+      title: 'API Docs'
+    - type: 'sourcedocPages'
+      moduleType: 'kotlindoc'
+      node: 'classes'
+      asSubmenu: true
+      submenuTitle: 'Classes'
+    - type: 'sourcedocPages'
+      moduleType: 'kotlindoc'
+      node: 'packages'
+      asSubmenu: true
+      submenuTitle: 'Packages'
+kotlindoc:
+  name: 'Vitrail'
+  sourceDirs:
+    - './../../../../src/main/kotlin'
+services:
+  publications:
+    stages:
+      - type: 'githubPages'
+        username: 'jlandic'
+        repo: 'vitrail'
+      - type: 'githubReleases'
+        repo: 'jlandic/vitrail'

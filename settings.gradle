@@ -1,2 +1,3 @@
-rootProject.name = 'vitrail'
+rootProject.name = "vitrail"
 
+include ":docs"
