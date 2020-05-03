@@ -36,3 +36,5 @@ jobs:
           java-version: 1.13
       - name: Build and deploy documentation
         run: ./gradlew :docs:orchidDeploy -PorchidEnvironment=prod
+      - name: Build and deploy artifact
+        run: ./gradlew bintrayUpload
