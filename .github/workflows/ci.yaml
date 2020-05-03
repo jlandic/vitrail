@@ -37,4 +37,7 @@ jobs:
       - name: Build and deploy documentation
         run: ./gradlew :docs:orchidDeploy -PorchidEnvironment=prod
       - name: Build and deploy artifact
+        env:
+          BINTRAY_USER: ${{ secrets.BINTRAY_USER }}
+          BINTRAY_KEY: ${{ secrets.BINTRAY_KEY }}
         run: ./gradlew bintrayUpload
