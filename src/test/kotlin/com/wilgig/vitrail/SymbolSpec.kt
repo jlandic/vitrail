@@ -47,7 +47,7 @@ object SymbolSpec : Spek({
             symbol.addRule(newRule)
             val field = Symbol::class.java.getDeclaredField("rules")
             field.trySetAccessible()
-            assertTrue((field.get(symbol) as MutableList<String>).contains(newRule))
+            assertTrue((field.get(symbol) as MutableList<*>).contains(newRule))
         }
     }
 })
