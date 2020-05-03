@@ -66,7 +66,7 @@ _Looks up the rules corresponding to the symbol, and picks one randomly as a rep
 }
 ```
 
-### Variable capture (default: `[symbol>variableName]`)
+#### Variable capture (default: `[symbol>variableName]`)
 
 _Creates a `variableName` symbol with a static value. The rules corresponding to `symbol` determine the value of `variableName`.
 This value never changes once it's initialized._
@@ -104,11 +104,25 @@ In the example above, both `subject` symbols will expand with the value coming f
 >
 > Do keep this in mind when writing your grammars.
 
-### Modifiers (default: `:modifierName`)
+#### Modifiers (default: `:modifierName`)
 
 _Applies a modification on the expanded value of a symbol._
 
-> Note: while a `Modifier` interface exists, 
+> Note: while a `Modifier` interface exists, and modifiers added to the `Grammar` at runtime are applied, the library does not provide any modifier yet.
+
+```json
+{
+  "root": "{subject:capitalize}",
+  "subject": [
+    "john"
+  ]
+}
+```
+
+Considering that the `Grammar` has a modifier with the name `capitalize`, that capitalizes the first letter of the value passed to it, the result of the example above would be:
+```
+"John"
+```
 
 ## License
 
@@ -116,3 +130,11 @@ _Applies a modification on the expanded value of a symbol._
 
 ## Changelog
 
+## Roadmap
+
+- Publish the library to a public Maven repository
+- Proper test coverage
+- API documentation
+- Implement more granular scopes for captured variables
+- Allow modifiers to receive parameters
+- Allow specifying probabilities for different rules to be picked when expanding a symbol
