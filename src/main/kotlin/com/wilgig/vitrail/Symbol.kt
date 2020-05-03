@@ -11,8 +11,9 @@ class Symbol(
         if (rules.isEmpty()) throw IllegalArgumentException("Rule set should never be empty")
     }
 
-    fun addRule(rule: String) {
+    fun addRule(rule: String): Symbol {
         rules.add(rule)
+        return this
     }
 
     fun pickRule(): String = random.elementFromList(rules)!!
