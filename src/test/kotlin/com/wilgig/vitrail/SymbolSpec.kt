@@ -1,12 +1,12 @@
 package com.wilgig.vitrail
 
+import kotlin.random.Random
 import org.junit.jupiter.api.Assertions.assertEquals
 import org.junit.jupiter.api.Assertions.assertTrue
 import org.junit.jupiter.api.assertThrows
 import org.mockito.Mockito
 import org.spekframework.spek2.Spek
 import org.spekframework.spek2.style.specification.describe
-import kotlin.random.Random
 
 object SymbolSpec : Spek({
     describe("#init") {
@@ -39,7 +39,7 @@ object SymbolSpec : Spek({
         val symbol by memoized { Symbol(rules) }
         val newRule by memoized { "new rule" }
 
-        it ("returns the symbol itself") {
+        it("returns the symbol itself") {
             assertEquals(symbol, symbol.addRule(newRule))
         }
 

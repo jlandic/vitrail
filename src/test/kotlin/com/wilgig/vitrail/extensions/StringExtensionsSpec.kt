@@ -1,9 +1,9 @@
 package com.wilgig.vitrail.extensions
 
 import com.wilgig.vitrail.config.DefaultGrammarSyntax
+import org.junit.jupiter.api.Assertions.assertEquals
 import org.spekframework.spek2.Spek
 import org.spekframework.spek2.style.specification.describe
-import org.junit.jupiter.api.Assertions.assertEquals
 
 object StringExtensionsSpec : Spek({
     val syntax by memoized { DefaultGrammarSyntax }
