@@ -1,9 +1,7 @@
 package com.wilgig.vitrail.extensions
 
-import com.wilgig.vitrail.config.GrammarSyntax.MODIFIER_OPERATOR
-import com.wilgig.vitrail.config.GrammarSyntax.SYMBOL_END
-import com.wilgig.vitrail.config.GrammarSyntax.SYMBOL_START
+import com.wilgig.vitrail.config.GrammarSyntax
 
-fun String.hasModifier(): Boolean = contains(MODIFIER_OPERATOR)
-fun String.isNonTerminal(): Boolean = contains(SYMBOL_START) && contains(SYMBOL_END)
-fun String.isTerminal(): Boolean = !isNonTerminal()
+fun String.hasModifier(syntax: GrammarSyntax): Boolean = contains(syntax.modifierOperator)
+fun String.isNonTerminal(syntax: GrammarSyntax): Boolean = contains(syntax.symbolStart) && contains(syntax.symbolEnd)
+fun String.isTerminal(syntax: GrammarSyntax): Boolean = !isNonTerminal(syntax)

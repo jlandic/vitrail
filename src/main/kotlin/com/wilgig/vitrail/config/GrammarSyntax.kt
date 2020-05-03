@@ -1,10 +1,10 @@
 package com.wilgig.vitrail.config
 
-object GrammarSyntax {
-    const val SYMBOL_START = '{'
-    const val SYMBOL_END = '}'
-    const val CAPTURE_START = '['
-    const val CAPTURE_END = ']'
-    const val CAPTURE_OPERATOR = '>'
-    const val MODIFIER_OPERATOR = ':'
+abstract class GrammarSyntax {
+    abstract val symbolStart: Char
+    abstract val symbolEnd: Char
+    abstract val captureStart: Char
+    abstract val captureEnd: Char
+    abstract val captureOperator: Char
+    abstract val modifierOperator: Char
 }
