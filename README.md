@@ -2,6 +2,7 @@
 
 ![Build](https://img.shields.io/github/workflow/status/jlandic/vitrail/CI/master?style=flat-square)
 ![License](https://img.shields.io/github/license/jlandic/vitrail?style=flat-square)
+![Version](https://img.shields.io/bintray/v/jlandic/vitrail/vitrail?style=flat-square)
 
 ## Introduction
 
@@ -23,6 +24,23 @@ It can be used on the spot by providing a grammar as a JSON file, and following 
 - `JDK >= 1.13`
 
 ### Install the library
+
+#### Gradle
+
+```groovy
+implementation "com.wilgig:vitrail:$VERSION"
+```
+
+#### Maven
+
+```xml
+<dependency>
+  <groupId>com.wilgig</groupId>
+  <artifactId>vitrail</artifactId>
+  <version>VERSION</version>
+  <type>pom</type>
+</dependency>
+```
 
 ## Usage
 
