@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sitemapindex
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/siteindex.xsd"
+    xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+    <sitemap>
+        <loc>https://jlandic.github.io/vitrail/sitemap-assets.xml</loc>
+        <lastmod>2020-05-03</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>https://jlandic.github.io/vitrail/sitemap-external.xml</loc>
+        <lastmod>2020-05-03</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>https://jlandic.github.io/vitrail/sitemap-changelog.xml</loc>
+        <lastmod>2020-05-03</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>https://jlandic.github.io/vitrail/sitemap-forms.xml</loc>
+        <lastmod>2020-05-03</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>https://jlandic.github.io/vitrail/sitemap-home.xml</loc>
+        <lastmod>2020-05-03</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>https://jlandic.github.io/vitrail/sitemap-kotlindoc.xml</loc>
+        <lastmod>2020-05-03</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>https://jlandic.github.io/vitrail/sitemap-pages.xml</loc>
+        <lastmod>2020-05-03</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>https://jlandic.github.io/vitrail/sitemap-wiki.xml</loc>
+        <lastmod>2020-05-03</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>https://jlandic.github.io/vitrail/sitemap-sitemap.xml</loc>
+        <lastmod>2020-05-03</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>https://jlandic.github.io/vitrail/sitemap-indices.xml</loc>
+        <lastmod>2020-05-03</lastmod>
+    </sitemap>
+    
+</sitemapindex>

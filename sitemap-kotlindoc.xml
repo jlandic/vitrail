@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd"
+    xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+    <url>
+        <loc>https://jlandic.github.io/vitrail/kotlindoc/vitrail</loc>
+        <lastmod>2020-05-03</lastmod>
+        <priority>0.0</priority>
+        
+    </url>
+    <url>
+        <loc>https://jlandic.github.io/vitrail/kotlindoc/vitrail/com/wilgig/vitrail</loc>
+        <lastmod>2020-05-03</lastmod>
+        <priority>0.0</priority>
+        
+    </url>
+    <url>
+        <loc>https://jlandic.github.io/vitrail/kotlindoc/vitrail/com/wilgig/vitrail/config</loc>
+        <lastmod>2020-05-03</lastmod>
+        <priority>0.0</priority>
+        
+    </url>
+    <url>
+        <loc>https://jlandic.github.io/vitrail/kotlindoc/vitrail/com/wilgig/vitrail/config/defaultgrammarsyntax</loc>
+        <lastmod>2020-05-03</lastmod>
+        <priority>0.0</priority>
+        
+    </url>
+    <url>
+        <loc>https://jlandic.github.io/vitrail/kotlindoc/vitrail/com/wilgig/vitrail/config/grammarsyntax</loc>
+        <lastmod>2020-05-03</lastmod>
+        <priority>0.0</priority>
+        
+    </url>
+    <url>
+        <loc>https://jlandic.github.io/vitrail/kotlindoc/vitrail/com/wilgig/vitrail/extensions</loc>
+        <lastmod>2020-05-03</lastmod>
+        <priority>0.0</priority>
+        
+    </url>
+    <url>
+        <loc>https://jlandic.github.io/vitrail/kotlindoc/vitrail/com/wilgig/vitrail/modifiers</loc>
+        <lastmod>2020-05-03</lastmod>
+        <priority>0.0</priority>
+        
+    </url>
+    <url>
+        <loc>https://jlandic.github.io/vitrail/kotlindoc/vitrail/com/wilgig/vitrail/modifiers/modifier</loc>
+        <lastmod>2020-05-03</lastmod>
+        <priority>0.0</priority>
+        
+    </url>
+    <url>
+        <loc>https://jlandic.github.io/vitrail/kotlindoc/vitrail/com/wilgig/vitrail/symbol</loc>
+        <lastmod>2020-05-03</lastmod>
+        <priority>0.0</priority>
+        
+    </url>
+    <url>
+        <loc>https://jlandic.github.io/vitrail/kotlindoc/vitrail/com/wilgig/vitrail/grammar</loc>
+        <lastmod>2020-05-03</lastmod>
+        <priority>0.0</priority>
+        
+    </url>
+    
+</urlset>

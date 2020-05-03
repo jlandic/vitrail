@@ -1,0 +1,417 @@
+<!DOCTYPE HTML>
+<!--
+    Editorial by HTML5 UP
+    html5up.net | @ajlkn
+    Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+<head>
+
+
+
+
+<meta charset="utf-8"/>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
+<meta name="generator" content="Orchid 0.20.0-SNAPSHOT"/>
+<link rel="icon" href="https://jlandic.github.io/vitrail/favicon.ico">
+
+
+<meta name="robots" content="index, follow">
+
+
+
+<title>Vitrail</title>
+
+
+<meta name="description" content="Documentation for the Vitrail kotlin library">
+
+
+
+
+
+<script>
+    window.site = {"orchidVersion":"0.20.0-SNAPSHOT","baseUrl":"https://jlandic.github.io/vitrail","environment":"prod","version":"0.0.1"};
+</script>
+
+
+
+
+    <!-- start:inject meta-components -->
+    
+        
+            
+        
+    
+    <!-- end:inject meta-components -->
+
+
+
+    <!-- start:inject meta-components -->
+    
+    <!-- end:inject meta-components -->
+
+
+
+
+
+<!-- start:inject styles -->
+<link rel="stylesheet" type="text/css" href="https://jlandic.github.io/vitrail/Editorial/175037e4/assets/css/editorial_main.css"  />
+<link rel="stylesheet" type="text/css" href="https://jlandic.github.io/vitrail/Editorial/175037e4/assets/css/editorial_orchidCustomizations.css"  />
+<link rel="stylesheet" type="text/css" href="https://jlandic.github.io/vitrail/Editorial/175037e4/assets/css/orchidSearch.css"  />
+<link rel="stylesheet" type="text/css" href="https://jlandic.github.io/vitrail/assets/css/orchidSearch.css"  />
+<!-- end:inject styles -->
+
+</head>
+<body class="is-loading">
+
+
+<!-- Wrapper -->
+<div id="wrapper">
+
+    <!-- Main -->
+    <div id="main">
+        <div class="inner">
+
+            <!-- Header -->
+            
+                <header id="header">
+    <a href="https://jlandic.github.io/vitrail" class="logo">Vitrail Documentation</a>
+    <ul class="icons">
+    
+    
+        <li>
+            <a href="https://github.com/jlandic/vitrail" class="icon fa-github">
+                <span class="label">github</span>
+            </a>
+        </li>
+    
+    
+    </ul>
+</header>
+            
+            
+            
+            
+                <section id="pageContent">
+                    <header class="major"><h2>Vitrail</h2></header>
+                    <article>
+                        
+    <!-- start:inject components -->
+    
+        
+            
+                
+                    
+                        <h1 id="vitrail"><a href="#vitrail" id="vitrail" class="anchor"></a>Vitrail</h1>
+<p><img src="https://img.shields.io/github/workflow/status/jlandic/vitrail/CI/master?style=flat-square" alt="Build" />
+<img src="https://img.shields.io/github/license/jlandic/vitrail?style=flat-square" alt="License" /></p>
+<h2 id="introduction"><a href="#introduction" id="introduction" class="anchor"></a>Introduction</h2>
+<p><code>Vitrail</code> is a text generator using context-free grammars, inspired by projects like <a href="https://github.com/galaxykate/tracery">Tracery</a>, or <a href="https://github.com/AlmasB/grammy">Grammy</a>.</p>
+<p>It can be used on the spot by providing a grammar as a JSON file, and following the default syntax, and can be used as a library.</p>
+<h2 id="features"><a href="#features" id="features" class="anchor"></a>Features</h2>
+<ul>
+<li>Read grammar from JSON file</li>
+<li>Shared variables, available through all symbol expansions</li>
+<li>Customisable grammar syntax/operators (when used as a library)</li>
+<li>Potential for custom modifiers (when used as a library)</li>
+</ul>
+<h2 id="installation"><a href="#installation" id="installation" class="anchor"></a>Installation</h2>
+<h3 id="requirements"><a href="#requirements" id="requirements" class="anchor"></a>Requirements</h3>
+<ul>
+<li><code>JDK &gt;= 1.13</code></li>
+</ul>
+<h3 id="install-the-library"><a href="#install-the-library" id="install-the-library" class="anchor"></a>Install the library</h3>
+<h2 id="usage"><a href="#usage" id="usage" class="anchor"></a>Usage</h2>
+<h3 id="run-the-sample-application"><a href="#run-the-sample-application" id="run-the-sample-application" class="anchor"></a>Run the sample application</h3>
+<ol>
+<li>Create a JSON file with your grammar under <code>src/main/resources</code>. Name the file <code>test.json</code>.</li>
+<li>Create a symbol named <code>root</code>. By convention, <code>vitrail</code> will expand the text starting with this <code>root</code> symbol
+<pre><code>{
+    &quot;root&quot;: &quot;Some text to be expanded&quot;
+}
+</code></pre>
+</li>
+<li>Add the rules you want according to the <a href="#grammar-features">default grammar syntax</a></li>
+<li>Run the sample application
+<pre><code>./gradlew run
+</code></pre>
+</li>
+</ol>
+<h3 id="grammar-features"><a href="#grammar-features" id="grammar-features" class="anchor"></a>Grammar features</h3>
+<h4 id="symbol-expansion-default--"><a href="#symbol-expansion-default--" id="symbol-expansion-default--" class="anchor"></a>Symbol expansion (default: <code>{ }</code>)</h4>
+<p><em>Looks up the rules corresponding to the symbol, and picks one randomly as a replacement</em></p>
+<pre><code class="language-json">{
+  &quot;root&quot;: &quot;{subject} {verb} {object}&quot;,
+  &quot;subject&quot;: [
+    &quot;Alice&quot;,
+    &quot;Bob&quot;
+  ],
+  &quot;verb&quot;: [
+    &quot;shares&quot;,
+    &quot;eats&quot;,
+    &quot;sees&quot;
+  ],
+  &quot;object&quot;: [
+    &quot;the apple&quot;,
+    &quot;the banana&quot;
+  ]
+}
+</code></pre>
+<h4 id="variable-capture-default-symbolvariablename"><a href="#variable-capture-default-symbolvariablename" id="variable-capture-default-symbolvariablename" class="anchor"></a>Variable capture (default: <code>[symbol&gt;variableName]</code>)</h4>
+<p><em>Creates a <code>variableName</code> symbol with a static value. The rules corresponding to <code>symbol</code> determine the value of <code>variableName</code>.
+This value never changes once it's initialized.</em></p>
+<pre><code class="language-json">{
+  &quot;root&quot;: &quot;[person&gt;subject]{subject} {verb}. {subject} also {verb}&quot;,
+  &quot;person&quot;: [
+    &quot;...&quot;
+  ],
+  &quot;...&quot;: []
+}
+</code></pre>
+<p>In the example above, both <code>subject</code> symbols will expand with the value coming from <code>person</code>.</p>
+<blockquote>
+<p>Note:
+The placement of the variable capture matters!</p>
+<p>The algorithm expands symbols from left to right. This means that a symbol expansion captured inside a variable is only available for expressions on its right side.</p>
+<p>Otherwise, placement is free.</p>
+</blockquote>
+<blockquote>
+<p>Note (expanding on the previous note):</p>
+<p>While placement is free for now, future plans involve allowing for more granularity regarding the scope of variables.</p>
+<p>One possibility would be to declare captures inside a symbol to make it available only inside the scope of this symbol's expansion:</p>
+<pre><code class="language-json">{
+  &quot;root&quot;: &quot;{[person&gt;subject]part1}. {[person&gt;subject]part2}&quot;
+}
+</code></pre>
+<p>In the example above, <code>subject</code> could have different values in the expansion of <code>part1</code> and <code>part2</code>.</p>
+<p>Do keep this in mind when writing your grammars.</p>
+</blockquote>
+<h4 id="modifiers-default-modifiername"><a href="#modifiers-default-modifiername" id="modifiers-default-modifiername" class="anchor"></a>Modifiers (default: <code>:modifierName</code>)</h4>
+<p><em>Applies a modification on the expanded value of a symbol.</em></p>
+<blockquote>
+<p>Note: while a <code>Modifier</code> interface exists, and modifiers added to the <code>Grammar</code> at runtime are applied, the library does not provide any modifier yet.</p>
+</blockquote>
+<pre><code class="language-json">{
+  &quot;root&quot;: &quot;{subject:capitalize}&quot;,
+  &quot;subject&quot;: [
+    &quot;john&quot;
+  ]
+}
+</code></pre>
+<p>Considering that the <code>Grammar</code> has a modifier with the name <code>capitalize</code>, that capitalizes the first letter of the value passed to it, the result of the example above would be:</p>
+<pre><code>&quot;John&quot;
+</code></pre>
+<h2 id="license"><a href="#license" id="license" class="anchor"></a>License</h2>
+<p><code>Vitrail</code> is released under <a href="https://opensource.org/licenses/MIT">MIT License</a></p>
+<h2 id="changelog"><a href="#changelog" id="changelog" class="anchor"></a>Changelog</h2>
+<h2 id="roadmap"><a href="#roadmap" id="roadmap" class="anchor"></a>Roadmap</h2>
+<ul>
+<li>Publish the library to a public Maven repository</li>
+<li>Proper test coverage</li>
+<li>API documentation</li>
+<li>Implement more granular scopes for captured variables</li>
+<li>Allow modifiers to receive parameters</li>
+<li>Allow specifying probabilities for different rules to be picked when expanding a symbol</li>
+</ul>
+
+
+
+<p><b>Roots:</b></p>
+<ul>
+  <li><a href="https://jlandic.github.io/vitrail/kotlindoc/vitrail/com/wilgig/vitrail">com.wilgig.vitrail</a></li>
+
+</ul>
+
+
+                    
+                
+            
+        
+    
+    <!-- end:inject components -->
+
+
+                    </article>
+                </section>
+            
+        </div>
+        <hr>
+
+        <!-- Page Footer -->
+        <div class="inner">
+    <footer id="footer">
+        <div class="clearfix">
+            
+            
+        </div>
+    </footer>
+</div>
+
+    </div>
+
+    <!-- Sidebar -->
+    <div id="sidebar">
+    <div class="inner">
+
+        <!-- Search -->
+        <section id="search" class="alt">
+            <form data-orchid-search="">
+                <input type="text" name="query" id="query" placeholder="Search"/>
+            </form>
+            <div class="box" id="search-results" data-orchid-search-results style="display: none;">
+                <b>Search Results</b>
+                <ul></ul>
+            </div>
+            <div class="box" id="search-progress" data-orchid-search-progress style="display: none;">
+                <div class="loader">Loading...</div>
+            </div>
+        </section>
+
+        <!-- Menu -->
+        <nav id="siteNav" class="menu">
+            <header class="major">
+                <h2>Vitrail Documentation</h2>
+            </header>
+            <ul class="top-level">
+                
+                    
+    
+    <li>
+        <a href="https://jlandic.github.io/vitrail/changelog">Changelog</a>
+    </li>
+    
+
+                
+                    
+    
+    <li>
+        <a class="subheader">API Docs</a>
+    </li>
+    
+
+                
+                    
+    <li>
+        <span class="opener">Classes</span>
+        <ul>
+        
+            
+    
+    <li>
+        <a href="https://jlandic.github.io/vitrail/kotlindoc/vitrail/com/wilgig/vitrail/config/defaultgrammarsyntax">DefaultGrammarSyntax</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://jlandic.github.io/vitrail/kotlindoc/vitrail/com/wilgig/vitrail/grammar">Grammar</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://jlandic.github.io/vitrail/kotlindoc/vitrail/com/wilgig/vitrail/config/grammarsyntax">GrammarSyntax</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://jlandic.github.io/vitrail/kotlindoc/vitrail/com/wilgig/vitrail/modifiers/modifier">Modifier</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://jlandic.github.io/vitrail/kotlindoc/vitrail/com/wilgig/vitrail/symbol">Symbol</a>
+    </li>
+    
+
+        
+        </ul>
+    </li>
+
+                
+                    
+    <li>
+        <span class="opener">Packages</span>
+        <ul>
+        
+            
+    
+    <li>
+        <a href="https://jlandic.github.io/vitrail/kotlindoc/vitrail/com/wilgig/vitrail">com.wilgig.vitrail</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://jlandic.github.io/vitrail/kotlindoc/vitrail/com/wilgig/vitrail/config">com.wilgig.vitrail.config</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://jlandic.github.io/vitrail/kotlindoc/vitrail/com/wilgig/vitrail/extensions">com.wilgig.vitrail.extensions</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://jlandic.github.io/vitrail/kotlindoc/vitrail/com/wilgig/vitrail/modifiers">com.wilgig.vitrail.modifiers</a>
+    </li>
+    
+
+        
+        </ul>
+    </li>
+
+                
+            </ul>
+        </nav>
+        
+
+        <!-- Section -->
+        <section>
+            <p class="text-center">
+                Currently 0.0.1. Created with <a href="https://orchid.run">Orchid </a> and <b>Orchid Editorial Theme</b>.
+            </p>
+        </section>
+
+        <!-- Footer -->
+        <footer id="footer">
+            <p class="copyright text-center">&copy; Vitrail Documentation. All rights reserved.<br>Design by <a href="https://html5up.net">HTML5 UP</a></p>
+        </footer>
+
+    </div>
+</div>
+
+</div>
+
+<!-- start:inject scripts -->
+<script  src="https://jlandic.github.io/vitrail/Editorial/175037e4/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script  src="https://jlandic.github.io/vitrail/Editorial/175037e4/ajax/libs/skel/3.0.1/skel.min.js"></script>
+<script  src="https://jlandic.github.io/vitrail/Editorial/175037e4/assets/js/editorial_util.js"></script>
+<script  src="https://jlandic.github.io/vitrail/Editorial/175037e4/assets/js/editorial_main.js"></script>
+<script  src="https://jlandic.github.io/vitrail/Editorial/175037e4/assets/js/editorial_orchidCustomizations.js"></script>
+<script  src="https://jlandic.github.io/vitrail/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script  src="https://jlandic.github.io/vitrail/lunr/lunr.js"></script>
+<script  src="https://jlandic.github.io/vitrail/assets/js/orchidSearch.js"></script>
+<!-- end:inject scripts -->
+
+</body>
+</html>

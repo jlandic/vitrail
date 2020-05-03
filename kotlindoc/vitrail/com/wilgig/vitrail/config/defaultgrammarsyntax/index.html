@@ -1,0 +1,413 @@
+<!DOCTYPE HTML>
+<!--
+    Editorial by HTML5 UP
+    html5up.net | @ajlkn
+    Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+<head>
+
+
+
+
+<meta charset="utf-8"/>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
+<meta name="generator" content="Orchid 0.20.0-SNAPSHOT"/>
+<link rel="icon" href="https://jlandic.github.io/vitrail/favicon.ico">
+
+
+<meta name="robots" content="index, follow">
+
+
+
+<title>DefaultGrammarSyntax</title>
+
+
+<meta name="description" content="Documentation for the Vitrail kotlin library">
+
+
+
+
+
+<script>
+    window.site = {"orchidVersion":"0.20.0-SNAPSHOT","baseUrl":"https://jlandic.github.io/vitrail","environment":"prod","version":"0.0.1"};
+</script>
+
+
+
+
+    <!-- start:inject meta-components -->
+    
+        
+            
+        
+    
+    <!-- end:inject meta-components -->
+
+
+
+    <!-- start:inject meta-components -->
+    
+    <!-- end:inject meta-components -->
+
+
+
+
+
+<!-- start:inject styles -->
+<link rel="stylesheet" type="text/css" href="https://jlandic.github.io/vitrail/Editorial/175037e4/assets/css/editorial_main.css"  />
+<link rel="stylesheet" type="text/css" href="https://jlandic.github.io/vitrail/Editorial/175037e4/assets/css/editorial_orchidCustomizations.css"  />
+<link rel="stylesheet" type="text/css" href="https://jlandic.github.io/vitrail/Editorial/175037e4/assets/css/orchidSearch.css"  />
+<link rel="stylesheet" type="text/css" href="https://jlandic.github.io/vitrail/assets/css/orchidSearch.css"  />
+<link rel="stylesheet" type="text/css" href="https://jlandic.github.io/vitrail/assets/css/orchidSourceDoc.css"  />
+<!-- end:inject styles -->
+
+</head>
+<body class="is-loading">
+
+
+<!-- Wrapper -->
+<div id="wrapper">
+
+    <!-- Main -->
+    <div id="main">
+        <div class="inner">
+
+            <!-- Header -->
+            
+                <header id="header">
+    <a href="https://jlandic.github.io/vitrail" class="logo">Vitrail Documentation</a>
+    <ul class="icons">
+    
+    
+        <li>
+            <a href="https://github.com/jlandic/vitrail" class="icon fa-github">
+                <span class="label">github</span>
+            </a>
+        </li>
+    
+    
+    </ul>
+</header>
+            
+            
+            
+            
+                <section id="pageContent">
+                    <header class="major"><h2>DefaultGrammarSyntax</h2></header>
+                    <article>
+                        
+    <!-- start:inject components -->
+    
+        
+            
+                
+                    
+                        <div class="sourcedoc-page orchid-sourcedoc content">
+  
+<div class="sourcedoc-section section-root section-level-1" id="DefaultGrammarSyntax">
+
+
+  <h1 class="sourcedoc-section section-name">DefaultGrammarSyntax</h1>
+  
+    <div class="sourcedoc-section section-element" id="8ae61021b277cc58ae259f58c537d43ef98e7868">
+      
+      <p class="sourcedoc-section section-signature">
+        <code>object <a href="https://jlandic.github.io/vitrail/kotlindoc/vitrail/com/wilgig/vitrail/config/defaultgrammarsyntax">DefaultGrammarSyntax</a></code>
+      </p>
+      <div class="sourcedoc-section section-comments"><p>Describes how <code>Grammar</code> interprets the grammar syntax by default, if
+no other custom <code>GrammarSyntax</code> instance is implemented.</p>
+</div>
+
+      
+      
+        
+          
+<div class="sourcedoc-section section-root section-level-2" id="fields">
+
+
+  <p class="sourcedoc-section section-name"><strong>Fields</strong></p>
+
+  <div class="table-container">
+    <table class="table is-fullwidth is-bordered">
+      <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+      </thead>
+      <tbody>
+      
+      <tr class="sourcedoc-section section-element" id="38ad21760fb5326610d54f73c6b80522191188f9">
+        <td class="sourcedoc-section section-signature">
+          <code>val symbolStart: Char</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>character starting a symbol expression</p>
+
+        </td>
+      </tr>
+      
+      <tr class="sourcedoc-section section-element" id="82aed143ae7117f7499da4e6558a057dcfba2a45">
+        <td class="sourcedoc-section section-signature">
+          <code>val symbolEnd: Char</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>character ending a symbol expression</p>
+
+        </td>
+      </tr>
+      
+      <tr class="sourcedoc-section section-element" id="64558c1c74ca6edf1738a6d1a3669fb672f96ef0">
+        <td class="sourcedoc-section section-signature">
+          <code>val captureStart: Char</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>character starting a capture expression</p>
+
+        </td>
+      </tr>
+      
+      <tr class="sourcedoc-section section-element" id="d99b4c4846e7330853356c126f4741ec44d485be">
+        <td class="sourcedoc-section section-signature">
+          <code>val captureEnd: Char</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>character ending a capture expression</p>
+
+        </td>
+      </tr>
+      
+      <tr class="sourcedoc-section section-element" id="ae225e4eb728e2089374b928ada18eb37e04252d">
+        <td class="sourcedoc-section section-signature">
+          <code>val captureOperator: Char</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>character separating the symbol used to generate the value of the capture, and the name of the variable holding this value</p>
+
+        </td>
+      </tr>
+      
+      <tr class="sourcedoc-section section-element" id="c1e3852b0dd46a875c84eb9394e9c1f2c92f4513">
+        <td class="sourcedoc-section section-signature">
+          <code>val modifierOperator: Char</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>character separating the symbol, and the modifier(s) applied to its expanded value</p>
+
+        </td>
+      </tr>
+      
+      </tbody>
+    </table>
+  </div>
+
+
+</div>
+
+        
+      
+    </div>
+  
+
+</div>
+
+</div>
+
+
+
+
+
+
+                    
+                
+            
+        
+    
+    <!-- end:inject components -->
+
+
+                    </article>
+                </section>
+            
+        </div>
+        <hr>
+
+        <!-- Page Footer -->
+        <div class="inner">
+    <footer id="footer">
+        <div class="clearfix">
+            
+            
+        </div>
+    </footer>
+</div>
+
+    </div>
+
+    <!-- Sidebar -->
+    <div id="sidebar">
+    <div class="inner">
+
+        <!-- Search -->
+        <section id="search" class="alt">
+            <form data-orchid-search="">
+                <input type="text" name="query" id="query" placeholder="Search"/>
+            </form>
+            <div class="box" id="search-results" data-orchid-search-results style="display: none;">
+                <b>Search Results</b>
+                <ul></ul>
+            </div>
+            <div class="box" id="search-progress" data-orchid-search-progress style="display: none;">
+                <div class="loader">Loading...</div>
+            </div>
+        </section>
+
+        <!-- Menu -->
+        <nav id="siteNav" class="menu">
+            <header class="major">
+                <h2>Vitrail Documentation</h2>
+            </header>
+            <ul class="top-level">
+                
+                    
+    
+    <li>
+        <a href="https://jlandic.github.io/vitrail/changelog">Changelog</a>
+    </li>
+    
+
+                
+                    
+    
+    <li>
+        <a class="subheader">API Docs</a>
+    </li>
+    
+
+                
+                    
+    <li>
+        <span class="opener">Classes</span>
+        <ul>
+        
+            
+    
+    <li>
+        <a href="https://jlandic.github.io/vitrail/kotlindoc/vitrail/com/wilgig/vitrail/config/defaultgrammarsyntax">DefaultGrammarSyntax</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://jlandic.github.io/vitrail/kotlindoc/vitrail/com/wilgig/vitrail/grammar">Grammar</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://jlandic.github.io/vitrail/kotlindoc/vitrail/com/wilgig/vitrail/config/grammarsyntax">GrammarSyntax</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://jlandic.github.io/vitrail/kotlindoc/vitrail/com/wilgig/vitrail/modifiers/modifier">Modifier</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://jlandic.github.io/vitrail/kotlindoc/vitrail/com/wilgig/vitrail/symbol">Symbol</a>
+    </li>
+    
+
+        
+        </ul>
+    </li>
+
+                
+                    
+    <li>
+        <span class="opener">Packages</span>
+        <ul>
+        
+            
+    
+    <li>
+        <a href="https://jlandic.github.io/vitrail/kotlindoc/vitrail/com/wilgig/vitrail">com.wilgig.vitrail</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://jlandic.github.io/vitrail/kotlindoc/vitrail/com/wilgig/vitrail/config">com.wilgig.vitrail.config</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://jlandic.github.io/vitrail/kotlindoc/vitrail/com/wilgig/vitrail/extensions">com.wilgig.vitrail.extensions</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://jlandic.github.io/vitrail/kotlindoc/vitrail/com/wilgig/vitrail/modifiers">com.wilgig.vitrail.modifiers</a>
+    </li>
+    
+
+        
+        </ul>
+    </li>
+
+                
+            </ul>
+        </nav>
+        
+
+        <!-- Section -->
+        <section>
+            <p class="text-center">
+                Currently 0.0.1. Created with <a href="https://orchid.run">Orchid </a> and <b>Orchid Editorial Theme</b>.
+            </p>
+        </section>
+
+        <!-- Footer -->
+        <footer id="footer">
+            <p class="copyright text-center">&copy; Vitrail Documentation. All rights reserved.<br>Design by <a href="https://html5up.net">HTML5 UP</a></p>
+        </footer>
+
+    </div>
+</div>
+
+</div>
+
+<!-- start:inject scripts -->
+<script  src="https://jlandic.github.io/vitrail/Editorial/175037e4/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script  src="https://jlandic.github.io/vitrail/Editorial/175037e4/ajax/libs/skel/3.0.1/skel.min.js"></script>
+<script  src="https://jlandic.github.io/vitrail/Editorial/175037e4/assets/js/editorial_util.js"></script>
+<script  src="https://jlandic.github.io/vitrail/Editorial/175037e4/assets/js/editorial_main.js"></script>
+<script  src="https://jlandic.github.io/vitrail/Editorial/175037e4/assets/js/editorial_orchidCustomizations.js"></script>
+<script  src="https://jlandic.github.io/vitrail/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script  src="https://jlandic.github.io/vitrail/lunr/lunr.js"></script>
+<script  src="https://jlandic.github.io/vitrail/assets/js/orchidSearch.js"></script>
+<!-- end:inject scripts -->
+
+</body>
+</html>

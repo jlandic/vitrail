@@ -1,0 +1,176 @@
+{
+  "ownKey": "kotlindoc",
+  "childrenPages": {"kotlindoc": {
+    "ownKey": "kotlindoc",
+    "childrenPages": {"vitrail": {
+      "ownKey": "vitrail",
+      "childrenPages": {"com": {
+        "ownKey": "com",
+        "childrenPages": {"wilgig": {
+          "ownKey": "wilgig",
+          "childrenPages": {"vitrail": {
+            "ownKey": "vitrail",
+            "childrenPages": {
+              "symbol": {
+                "ownKey": "symbol",
+                "ownPages": [{
+                  "reference": {
+                    "path": "kotlindoc/vitrail",
+                    "baseUrl": "https://jlandic.github.io/vitrail",
+                    "fileName": "com/wilgig/vitrail/symbol",
+                    "extension": "html",
+                    "usePrettyUrl": true,
+                    "link": "https://jlandic.github.io/vitrail/kotlindoc/vitrail/com/wilgig/vitrail/symbol"
+                  },
+                  "description": "",
+                  "title": "Symbol",
+                  "content": "<p>CommentComponent(kind=text, text=Symbol defined as a list of possible rules it can return when expanded., value=null)<\/p>\n"
+                }]
+              },
+              "extensions": {
+                "ownKey": "extensions",
+                "ownPages": [{
+                  "reference": {
+                    "path": "kotlindoc/vitrail",
+                    "baseUrl": "https://jlandic.github.io/vitrail",
+                    "fileName": "com/wilgig/vitrail/extensions",
+                    "extension": "html",
+                    "usePrettyUrl": true,
+                    "link": "https://jlandic.github.io/vitrail/kotlindoc/vitrail/com/wilgig/vitrail/extensions"
+                  },
+                  "description": "",
+                  "title": "com.wilgig.vitrail.extensions",
+                  "content": "<p>CommentComponent(kind=text, text=, value=null)<\/p>\n"
+                }]
+              },
+              "grammar": {
+                "ownKey": "grammar",
+                "ownPages": [{
+                  "reference": {
+                    "path": "kotlindoc/vitrail",
+                    "baseUrl": "https://jlandic.github.io/vitrail",
+                    "fileName": "com/wilgig/vitrail/grammar",
+                    "extension": "html",
+                    "usePrettyUrl": true,
+                    "link": "https://jlandic.github.io/vitrail/kotlindoc/vitrail/com/wilgig/vitrail/grammar"
+                  },
+                  "description": "",
+                  "title": "Grammar",
+                  "content": "<p>CommentComponent(kind=text, text=Reads a context-free grammar description, based on a given customisable syntax, and expands the grammar from a given root symbol., value=null)<\/p>\n"
+                }]
+              },
+              "modifiers": {
+                "ownKey": "modifiers",
+                "childrenPages": {"modifier": {
+                  "ownKey": "modifier",
+                  "ownPages": [{
+                    "reference": {
+                      "path": "kotlindoc/vitrail",
+                      "baseUrl": "https://jlandic.github.io/vitrail",
+                      "fileName": "com/wilgig/vitrail/modifiers/modifier",
+                      "extension": "html",
+                      "usePrettyUrl": true,
+                      "link": "https://jlandic.github.io/vitrail/kotlindoc/vitrail/com/wilgig/vitrail/modifiers/modifier"
+                    },
+                    "description": "",
+                    "title": "Modifier",
+                    "content": "<p>CommentComponent(kind=text, text=Describes a modification applied on a given expanded symbol (String), value=null)<\/p>\n"
+                  }]
+                }},
+                "ownPages": [{
+                  "reference": {
+                    "path": "kotlindoc/vitrail",
+                    "baseUrl": "https://jlandic.github.io/vitrail",
+                    "fileName": "com/wilgig/vitrail/modifiers",
+                    "extension": "html",
+                    "usePrettyUrl": true,
+                    "link": "https://jlandic.github.io/vitrail/kotlindoc/vitrail/com/wilgig/vitrail/modifiers"
+                  },
+                  "description": "",
+                  "title": "com.wilgig.vitrail.modifiers",
+                  "content": "<p>CommentComponent(kind=text, text=, value=null)<\/p>\n"
+                }]
+              },
+              "config": {
+                "ownKey": "config",
+                "childrenPages": {
+                  "defaultgrammarsyntax": {
+                    "ownKey": "defaultgrammarsyntax",
+                    "ownPages": [{
+                      "reference": {
+                        "path": "kotlindoc/vitrail",
+                        "baseUrl": "https://jlandic.github.io/vitrail",
+                        "fileName": "com/wilgig/vitrail/config/defaultgrammarsyntax",
+                        "extension": "html",
+                        "usePrettyUrl": true,
+                        "link": "https://jlandic.github.io/vitrail/kotlindoc/vitrail/com/wilgig/vitrail/config/defaultgrammarsyntax"
+                      },
+                      "description": "",
+                      "title": "DefaultGrammarSyntax",
+                      "content": "<p>CommentComponent(kind=text, text=Describes how <code>Grammar<\/code> interprets the grammar syntax by default, if\nno other custom <code>GrammarSyntax<\/code> instance is implemented., value=null)<\/p>\n"
+                    }]
+                  },
+                  "grammarsyntax": {
+                    "ownKey": "grammarsyntax",
+                    "ownPages": [{
+                      "reference": {
+                        "path": "kotlindoc/vitrail",
+                        "baseUrl": "https://jlandic.github.io/vitrail",
+                        "fileName": "com/wilgig/vitrail/config/grammarsyntax",
+                        "extension": "html",
+                        "usePrettyUrl": true,
+                        "link": "https://jlandic.github.io/vitrail/kotlindoc/vitrail/com/wilgig/vitrail/config/grammarsyntax"
+                      },
+                      "description": "",
+                      "title": "GrammarSyntax",
+                      "content": "<p>CommentComponent(kind=text, text=Describes how <code>Grammar<\/code> interprets the grammar it expands, in terms of operators and syntax:<ul><li>What determines a variable capture<\/li><li>What determines a symbol to be expanded<\/li><li>How are modifiers called<\/li><li>...<\/li><\/ul><p>By default, <code>Grammar<\/code> uses the syntax implemented by <code>DefaultGrammarSyntax<\/code>.<\/p><p>Implement <code>GrammarSyntax<\/code> to use your own grammar syntax.<\/p>, value=null)<\/p>\n"
+                    }]
+                  }
+                },
+                "ownPages": [{
+                  "reference": {
+                    "path": "kotlindoc/vitrail",
+                    "baseUrl": "https://jlandic.github.io/vitrail",
+                    "fileName": "com/wilgig/vitrail/config",
+                    "extension": "html",
+                    "usePrettyUrl": true,
+                    "link": "https://jlandic.github.io/vitrail/kotlindoc/vitrail/com/wilgig/vitrail/config"
+                  },
+                  "description": "",
+                  "title": "com.wilgig.vitrail.config",
+                  "content": "<p>CommentComponent(kind=text, text=, value=null)<\/p>\n"
+                }]
+              }
+            },
+            "ownPages": [{
+              "reference": {
+                "path": "kotlindoc/vitrail",
+                "baseUrl": "https://jlandic.github.io/vitrail",
+                "fileName": "com/wilgig/vitrail",
+                "extension": "html",
+                "usePrettyUrl": true,
+                "link": "https://jlandic.github.io/vitrail/kotlindoc/vitrail/com/wilgig/vitrail"
+              },
+              "description": "",
+              "title": "com.wilgig.vitrail",
+              "content": "<p>CommentComponent(kind=text, text=, value=null)<\/p>\n"
+            }]
+          }}
+        }}
+      }},
+      "ownPages": [{
+        "reference": {
+          "path": "kotlindoc",
+          "baseUrl": "https://jlandic.github.io/vitrail",
+          "fileName": "vitrail",
+          "extension": "html",
+          "usePrettyUrl": true,
+          "link": "https://jlandic.github.io/vitrail/kotlindoc/vitrail"
+        },
+        "description": "",
+        "title": "Vitrail",
+        "content": "<h1 id=\"vitrail\"><a href=\"#vitrail\" id=\"vitrail\" class=\"anchor\"><\/a>Vitrail<\/h1>\n<p><img src=\"https://img.shields.io/github/workflow/status/jlandic/vitrail/CI/master?style=flat-square\" alt=\"Build\" />\n<img src=\"https://img.shields.io/github/license/jlandic/vitrail?style=flat-square\" alt=\"License\" /><\/p>\n<h2 id=\"introduction\"><a href=\"#introduction\" id=\"introduction\" class=\"anchor\"><\/a>Introduction<\/h2>\n<p><code>Vitrail<\/code> is a text generator using context-free grammars, inspired by projects like <a href=\"https://github.com/galaxykate/tracery\">Tracery<\/a>, or <a href=\"https://github.com/AlmasB/grammy\">Grammy<\/a>.<\/p>\n<p>It can be used on the spot by providing a grammar as a JSON file, and following the default syntax, and can be used as a library.<\/p>\n<h2 id=\"features\"><a href=\"#features\" id=\"features\" class=\"anchor\"><\/a>Features<\/h2>\n<ul>\n<li>Read grammar from JSON file<\/li>\n<li>Shared variables, available through all symbol expansions<\/li>\n<li>Customisable grammar syntax/operators (when used as a library)<\/li>\n<li>Potential for custom modifiers (when used as a library)<\/li>\n<\/ul>\n<h2 id=\"installation\"><a href=\"#installation\" id=\"installation\" class=\"anchor\"><\/a>Installation<\/h2>\n<h3 id=\"requirements\"><a href=\"#requirements\" id=\"requirements\" class=\"anchor\"><\/a>Requirements<\/h3>\n<ul>\n<li><code>JDK &gt;= 1.13<\/code><\/li>\n<\/ul>\n<h3 id=\"install-the-library\"><a href=\"#install-the-library\" id=\"install-the-library\" class=\"anchor\"><\/a>Install the library<\/h3>\n<h2 id=\"usage\"><a href=\"#usage\" id=\"usage\" class=\"anchor\"><\/a>Usage<\/h2>\n<h3 id=\"run-the-sample-application\"><a href=\"#run-the-sample-application\" id=\"run-the-sample-application\" class=\"anchor\"><\/a>Run the sample application<\/h3>\n<ol>\n<li>Create a JSON file with your grammar under <code>src/main/resources<\/code>. Name the file <code>test.json<\/code>.<\/li>\n<li>Create a symbol named <code>root<\/code>. By convention, <code>vitrail<\/code> will expand the text starting with this <code>root<\/code> symbol\n<pre><code>{\n    &quot;root&quot;: &quot;Some text to be expanded&quot;\n}\n<\/code><\/pre>\n<\/li>\n<li>Add the rules you want according to the <a href=\"#grammar-features\">default grammar syntax<\/a><\/li>\n<li>Run the sample application\n<pre><code>./gradlew run\n<\/code><\/pre>\n<\/li>\n<\/ol>\n<h3 id=\"grammar-features\"><a href=\"#grammar-features\" id=\"grammar-features\" class=\"anchor\"><\/a>Grammar features<\/h3>\n<h4 id=\"symbol-expansion-default--\"><a href=\"#symbol-expansion-default--\" id=\"symbol-expansion-default--\" class=\"anchor\"><\/a>Symbol expansion (default: <code>{ }<\/code>)<\/h4>\n<p><em>Looks up the rules corresponding to the symbol, and picks one randomly as a replacement<\/em><\/p>\n<pre><code class=\"language-json\">{\n  &quot;root&quot;: &quot;{subject} {verb} {object}&quot;,\n  &quot;subject&quot;: [\n    &quot;Alice&quot;,\n    &quot;Bob&quot;\n  ],\n  &quot;verb&quot;: [\n    &quot;shares&quot;,\n    &quot;eats&quot;,\n    &quot;sees&quot;\n  ],\n  &quot;object&quot;: [\n    &quot;the apple&quot;,\n    &quot;the banana&quot;\n  ]\n}\n<\/code><\/pre>\n<h4 id=\"variable-capture-default-symbolvariablename\"><a href=\"#variable-capture-default-symbolvariablename\" id=\"variable-capture-default-symbolvariablename\" class=\"anchor\"><\/a>Variable capture (default: <code>[symbol&gt;variableName]<\/code>)<\/h4>\n<p><em>Creates a <code>variableName<\/code> symbol with a static value. The rules corresponding to <code>symbol<\/code> determine the value of <code>variableName<\/code>.\nThis value never changes once it's initialized.<\/em><\/p>\n<pre><code class=\"language-json\">{\n  &quot;root&quot;: &quot;[person&gt;subject]{subject} {verb}. {subject} also {verb}&quot;,\n  &quot;person&quot;: [\n    &quot;...&quot;\n  ],\n  &quot;...&quot;: []\n}\n<\/code><\/pre>\n<p>In the example above, both <code>subject<\/code> symbols will expand with the value coming from <code>person<\/code>.<\/p>\n<blockquote>\n<p>Note:\nThe placement of the variable capture matters!<\/p>\n<p>The algorithm expands symbols from left to right. This means that a symbol expansion captured inside a variable is only available for expressions on its right side.<\/p>\n<p>Otherwise, placement is free.<\/p>\n<\/blockquote>\n<blockquote>\n<p>Note (expanding on the previous note):<\/p>\n<p>While placement is free for now, future plans involve allowing for more granularity regarding the scope of variables.<\/p>\n<p>One possibility would be to declare captures inside a symbol to make it available only inside the scope of this symbol's expansion:<\/p>\n<pre><code class=\"language-json\">{\n  &quot;root&quot;: &quot;{[person&gt;subject]part1}. {[person&gt;subject]part2}&quot;\n}\n<\/code><\/pre>\n<p>In the example above, <code>subject<\/code> could have different values in the expansion of <code>part1<\/code> and <code>part2<\/code>.<\/p>\n<p>Do keep this in mind when writing your grammars.<\/p>\n<\/blockquote>\n<h4 id=\"modifiers-default-modifiername\"><a href=\"#modifiers-default-modifiername\" id=\"modifiers-default-modifiername\" class=\"anchor\"><\/a>Modifiers (default: <code>:modifierName<\/code>)<\/h4>\n<p><em>Applies a modification on the expanded value of a symbol.<\/em><\/p>\n<blockquote>\n<p>Note: while a <code>Modifier<\/code> interface exists, and modifiers added to the <code>Grammar<\/code> at runtime are applied, the library does not provide any modifier yet.<\/p>\n<\/blockquote>\n<pre><code class=\"language-json\">{\n  &quot;root&quot;: &quot;{subject:capitalize}&quot;,\n  &quot;subject&quot;: [\n    &quot;john&quot;\n  ]\n}\n<\/code><\/pre>\n<p>Considering that the <code>Grammar<\/code> has a modifier with the name <code>capitalize<\/code>, that capitalizes the first letter of the value passed to it, the result of the example above would be:<\/p>\n<pre><code>&quot;John&quot;\n<\/code><\/pre>\n<h2 id=\"license\"><a href=\"#license\" id=\"license\" class=\"anchor\"><\/a>License<\/h2>\n<p><code>Vitrail<\/code> is released under <a href=\"https://opensource.org/licenses/MIT\">MIT License<\/a><\/p>\n<h2 id=\"changelog\"><a href=\"#changelog\" id=\"changelog\" class=\"anchor\"><\/a>Changelog<\/h2>\n<h2 id=\"roadmap\"><a href=\"#roadmap\" id=\"roadmap\" class=\"anchor\"><\/a>Roadmap<\/h2>\n<ul>\n<li>Publish the library to a public Maven repository<\/li>\n<li>Proper test coverage<\/li>\n<li>API documentation<\/li>\n<li>Implement more granular scopes for captured variables<\/li>\n<li>Allow modifiers to receive parameters<\/li>\n<li>Allow specifying probabilities for different rules to be picked when expanding a symbol<\/li>\n<\/ul>\n"
+      }]
+    }}
+  }}
+}
