@@ -2,9 +2,9 @@
 
 ![Build](https://img.shields.io/github/workflow/status/jlandic/vitrail/CI/master?style=flat-square&logo=github-actions)
 ![Coverage](https://img.shields.io/codecov/c/github/jlandic/vitrail?logo=codecov&style=flat-square)
-![Version](https://img.shields.io/bintray/v/jlandic/vitrail/vitrail?style=flat-square&logo=gradle)
+[![Version](https://img.shields.io/bintray/v/jlandic/vitrail/vitrail?style=flat-square&logo=gradle)](https://bintray.com/jlandic/vitrail)
 
-![License](https://img.shields.io/github/license/jlandic/vitrail?style=flat-square)
+[![License](https://img.shields.io/github/license/jlandic/vitrail?style=flat-square)](https://opensource.org/licenses/MIT)
 
 ## Introduction
 
