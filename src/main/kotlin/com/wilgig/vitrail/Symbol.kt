@@ -13,7 +13,7 @@ import kotlin.random.Random
  * @author @jlandic
  */
 class Symbol(
-    private val rules: MutableList<String>,
+    val rules: MutableList<String>,
     private val random: Random = Random(System.currentTimeMillis())
 ) {
     init {

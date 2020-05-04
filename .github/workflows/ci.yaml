@@ -17,13 +17,17 @@ jobs:
       - name: Run linter
         run: ./gradlew ktlintCheck
       - name: Run unit tests
-        run: ./gradlew test
+        run: ./gradlew testWithCoverage
+      - name: Upload coverage to codecov
+        if: github.ref == 'refs/heads/master'
+        uses: codecov/codecov-action@v1
+        with:
+          token: ${{ secrets.CODECOV_TOKEN }}
+          file: build/reports/jacoco/test/jacocoTestReport.xml
   deploy:
     name: Deploy
     if: startsWith(github.ref, 'refs/tags/')
     needs: tests
-    env:
-      GH_TOKEN: ${{ github.token }}
 
     runs-on: ubuntu-latest
 
@@ -35,6 +39,8 @@ jobs:
         with:
           java-version: 1.13
       - name: Build and deploy documentation
+        env:
+          GH_TOKEN: ${{ github.token }}
         run: ./gradlew :docs:orchidDeploy -PorchidEnvironment=prod
       - name: Build and deploy artifact
         env:

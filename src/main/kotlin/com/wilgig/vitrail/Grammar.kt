@@ -27,7 +27,7 @@ import kotlin.random.Random
  * @author @jlandic
  */
 class Grammar(
-    private val symbols: MutableMap<String, Symbol> = hashMapOf(),
+    val symbols: MutableMap<String, Symbol> = hashMapOf(),
     private val modifiers: MutableMap<String, Modifier> = mutableMapOf(),
     private val random: Random = Random(System.currentTimeMillis()),
     private val syntax: GrammarSyntax = DefaultGrammarSyntax

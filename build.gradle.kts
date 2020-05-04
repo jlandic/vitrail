@@ -1,7 +1,10 @@
+import org.gradle.api.tasks.testing.logging.TestLogEvent
+
 plugins {
     kotlin("jvm") version "1.3.72"
     application
     `maven-publish`
+    jacoco
     id("org.jlleitschuh.gradle.ktlint") version "9.2.1"
     id("com.jfrog.bintray") version "1.8.5"
 }
@@ -55,10 +58,40 @@ compileTestKotlin.kotlinOptions {
     jvmTarget = "1.8"
 }
 
-tasks.withType<Test> {
-    useJUnitPlatform {
-        includeEngines("spek")
+tasks.test {
+    useJUnitPlatform()
+
+    testLogging {
+        events = setOf(
+            TestLogEvent.STARTED,
+            TestLogEvent.PASSED,
+            TestLogEvent.FAILED
+        )
+        showStandardStreams = true
     }
+}
+
+jacoco {
+    toolVersion = "0.8.5"
+}
+
+tasks.jacocoTestReport {
+    reports {
+        xml.isEnabled = true
+        csv.isEnabled = false
+        html.isEnabled = true
+        html.destination = file("$buildDir/jacocoHtml")
+    }
+}
+
+val testWithCoverage by tasks.registering {
+    group = "verification"
+    description = "Runs the unit tests with coverage."
+
+    dependsOn(":test", ":jacocoTestReport", ":jacocoTestCoverageVerification")
+    val jacocoTestReport = tasks.findByName("jacocoTestReport")
+    jacocoTestReport?.mustRunAfter(tasks.findByName("test"))
+    tasks.findByName("jacocoTestCoverageVerification")?.mustRunAfter(jacocoTestReport)
 }
 
 val sourcesJar by tasks.creating(Jar::class) {
