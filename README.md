@@ -150,9 +150,7 @@ Considering that the `Grammar` has a modifier with the name `capitalize`, that c
 
 ## Roadmap
 
-- Publish the library to a public Maven repository
 - Proper test coverage
-- API documentation
 - Implement more granular scopes for captured variables
 - Allow modifiers to receive parameters
 - Allow specifying probabilities for different rules to be picked when expanding a symbol
