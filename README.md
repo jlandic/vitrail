@@ -1,8 +1,10 @@
 # Vitrail
 
-![Build](https://img.shields.io/github/workflow/status/jlandic/vitrail/CI/master?style=flat-square)
+![Build](https://img.shields.io/github/workflow/status/jlandic/vitrail/CI/master?style=flat-square&logo=github-actions)
+![Coverage](https://img.shields.io/codecov/c/github/jlandic/vitrail?logo=codecov&style=flat-square)
+![Version](https://img.shields.io/bintray/v/jlandic/vitrail/vitrail?style=flat-square&logo=gradle)
+
 ![License](https://img.shields.io/github/license/jlandic/vitrail?style=flat-square)
-![Version](https://img.shields.io/bintray/v/jlandic/vitrail/vitrail?style=flat-square)
 
 ## Introduction
 
@@ -16,6 +18,8 @@ It can be used on the spot by providing a grammar as a JSON file, and following 
 - Shared variables, available through all symbol expansions
 - Customisable grammar syntax/operators (when used as a library)
 - Potential for custom modifiers (when used as a library)
+
+## [Documentation](https://jlandic.github.io/vitrail)
 
 ## Installation
 
