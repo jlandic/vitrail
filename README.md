@@ -19,6 +19,18 @@ It can be used on the spot by providing a grammar as a JSON file, and following 
 - Customisable grammar syntax/operators (when used as a library)
 - Potential for custom modifiers (when used as a library)
 
+### JSON Grammar file
+
+![Example JSON grammar file](./demo-json.png)
+
+### Kotlin code
+
+![Example Kotlin code](./demo-app.png)
+
+### Example output
+
+![Example output](./demo-output.png)
+
 ## [Documentation](https://jlandic.github.io/vitrail)
 
 ## Installation

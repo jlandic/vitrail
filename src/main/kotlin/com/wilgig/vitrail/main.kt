@@ -10,6 +10,6 @@ fun main() {
         Grammar::class.java.getResource("/test.json").readText()
     )
 
-    println(grammar.flatten())
+    for (i in 0 until 15) { println(grammar.flatten()) }
     exitProcess(0)
 }
