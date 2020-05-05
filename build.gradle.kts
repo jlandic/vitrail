@@ -13,6 +13,7 @@ val vitrailVersion = "0.0.1"
 
 allprojects {
     ext {
+        @Suppress("UNUSED_VARIABLE")
         val artifactVersion = vitrailVersion
     }
 }
@@ -76,6 +77,12 @@ jacoco {
 }
 
 tasks.jacocoTestReport {
+    classDirectories.setFrom(files(classDirectories.files.map {
+        fileTree(it) {
+            exclude("**/MainKt.class")
+        }
+    }))
+
     reports {
         xml.isEnabled = true
         csv.isEnabled = false

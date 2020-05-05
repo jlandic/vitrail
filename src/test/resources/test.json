@@ -1,0 +1,7 @@
+{
+  "root": "[capture>captureVar]{symbolKey}",
+  "capture": [
+    "{secondLevelSymbolKey}"
+  ],
+  "secondLevelSymbolKey": ["Print {captureVal}"]
+}
