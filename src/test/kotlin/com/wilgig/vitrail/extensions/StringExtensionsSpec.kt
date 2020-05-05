@@ -1,6 +1,8 @@
 package com.wilgig.vitrail.extensions
 
 import com.wilgig.vitrail.config.DefaultGrammarSyntax
+import com.wilgig.vitrail.config.DefaultGrammarSyntax.symbolEnd
+import com.wilgig.vitrail.config.DefaultGrammarSyntax.symbolStart
 import org.junit.jupiter.api.Assertions.assertEquals
 import org.spekframework.spek2.Spek
 import org.spekframework.spek2.style.specification.describe
@@ -38,10 +40,26 @@ object StringExtensionsSpec : Spek({
             }
         }
 
-        context("when string does not have both a symbol start and symbol end character") {
+        context("when string has neither a symbol start nor end character") {
             val string by memoized { "Something else" }
 
             it("returns true") {
+                assertEquals(true, string.isTerminal(syntax))
+            }
+        }
+
+        context("when string has a symbol start but no symbol end character") {
+            val string by memoized { "Something $symbolStart else" }
+
+            it("returns false") {
+                assertEquals(true, string.isTerminal(syntax))
+            }
+        }
+
+        context("when string has a symbol end but no symbol start character") {
+            val string by memoized { "Something else$symbolEnd" }
+
+            it("returns false") {
                 assertEquals(true, string.isTerminal(syntax))
             }
         }
