@@ -8,7 +8,6 @@ import com.wilgig.vitrail.extensions.hasModifier
 import com.wilgig.vitrail.extensions.isNonTerminal
 import com.wilgig.vitrail.extensions.isTerminal
 import com.wilgig.vitrail.modifiers.Modifier
-import java.lang.IllegalArgumentException
 import kotlin.random.Random
 
 /**
@@ -110,6 +109,7 @@ class Grammar(
      * @param modifier the [Modifier] instance to apply to the symbol when the modifier is called
      * @return the grammar instance itself
      */
+    @Suppress("unused")
     fun withModifier(name: String, modifier: Modifier): Grammar {
         modifiers[name] = modifier
         return this
@@ -123,7 +123,15 @@ class Grammar(
      */
     fun flatten(root: String = DEFAULT_ROOT_KEY): String = expand(getSymbol(root).pickRule())
 
-    fun expand(text: String): String {
+    /**
+     * @param key the key to the symbol rules
+     * @return the [Symbol] instance mapped to the given key
+     * @throws IllegalArgumentException if the key does not exist in the Grammar
+     */
+    fun getSymbol(key: String) =
+        symbols[key] ?: throw IllegalArgumentException("Symbol $key does not lead to any other valid rule")
+
+    private fun expand(text: String): String {
         if (text.isTerminal(syntax)) return text
 
         var expandedText = text
@@ -134,7 +142,7 @@ class Grammar(
         return expandedText
     }
 
-    fun expandText(text: String): String {
+    private fun expandText(text: String): String {
         var symbolStartIndex = 0
         var captureStartIndex = 0
 
@@ -158,7 +166,7 @@ class Grammar(
         return text
     }
 
-    fun expandSymbol(text: String): String {
+    private fun expandSymbol(text: String): String {
         val key = text.substringBefore(syntax.modifierOperator)
         val symbol = getSymbol(key)
         var expandedText = expandText(symbol.pickRule())
@@ -173,7 +181,7 @@ class Grammar(
         return expandedText
     }
 
-    fun applyModifiers(text: String, modifierNames: List<String>): String {
+    private fun applyModifiers(text: String, modifierNames: List<String>): String {
         var modifiedText = text
         modifierNames.mapNotNull {
             modifiers[it]
@@ -184,7 +192,7 @@ class Grammar(
         return modifiedText
     }
 
-    fun captureSymbol(text: String) {
+    private fun captureSymbol(text: String) {
         val capture = text.split(syntax.captureOperator)
 
         if (capture.size != 2) throw error("Invalid capture: `$text`")
@@ -193,6 +201,4 @@ class Grammar(
         val extrapolationKey = capture[0]
         withSymbol(newSymbol, mutableListOf(getSymbol(extrapolationKey).pickRule()))
     }
-
-    fun getSymbol(key: String) = symbols[key] ?: throw IllegalArgumentException("Symbol $key does not lead to any other valid rule")
 }

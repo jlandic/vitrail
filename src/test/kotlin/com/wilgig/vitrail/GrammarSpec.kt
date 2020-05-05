@@ -12,6 +12,7 @@ fun Root.setup() {
     val rules by memoized { mutableListOf(rule) }
     val symbol by memoized { Symbol(rules) }
     val symbols by memoized { mutableMapOf(root to symbol) }
+
     @Suppress("UNUSED_VARIABLE")
     val instance by memoized { Grammar(symbols = symbols) }
 }
@@ -20,7 +21,7 @@ object GrammarSpec : Spek({
     setup()
 
     describe("#withSymbol") {
-        val symbol: String by memoized { "newSymbol" }
+        val symbol: String by memoized { "new symbol" }
         val rules: MutableList<String> by memoized { mutableListOf("rule") }
         val instance: Grammar by memoized()
 

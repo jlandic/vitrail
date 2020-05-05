@@ -3,5 +3,7 @@
   "capture": [
     "{secondLevelSymbolKey}"
   ],
-  "secondLevelSymbolKey": ["Print {captureVal}"]
+  "secondLevelSymbolKey": [
+    "Print {captureVal}"
+  ]
 }

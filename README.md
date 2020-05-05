@@ -51,7 +51,7 @@ implementation "com.wilgig:vitrail:$VERSION"
 ### Run the sample application
 
 1. Create a JSON file with your grammar under `src/main/resources`. Name the file `test.json`.
-2. Create a symbol named `root`. By convention, `vitrail` will expand the text starting with this `root` symbol
+2. Create a symbol named `root`. By convention, `vitrail` will expand the text starting with this `root` symbol.
     ```
     {
         "root": "Some text to be expanded"

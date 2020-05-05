@@ -1,3 +1,5 @@
+@file:Suppress("SpellCheckingInspection", "SpellCheckingInspection")
+
 import org.gradle.api.tasks.testing.logging.TestLogEvent
 
 plugins {
