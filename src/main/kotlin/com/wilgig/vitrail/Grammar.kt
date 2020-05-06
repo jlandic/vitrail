@@ -186,7 +186,7 @@ class Grammar(
         modifierNames.mapNotNull {
             modifiers[it]
         }.forEach {
-            modifiedText = it.apply(modifiedText)
+            modifiedText = it.applyTo(modifiedText)
         }
 
         return modifiedText

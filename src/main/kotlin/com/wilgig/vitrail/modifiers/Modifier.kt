@@ -12,5 +12,5 @@ interface Modifier {
      * @param sourceText the expanded symbol to modify
      * @return the modified string
      */
-    fun apply(sourceText: String): String
+    fun applyTo(sourceText: String): String
 }
