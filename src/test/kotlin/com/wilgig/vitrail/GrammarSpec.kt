@@ -1,5 +1,6 @@
 package com.wilgig.vitrail
 
+import com.wilgig.vitrail.modifiers.CapitalizeModifier
 import org.junit.jupiter.api.Assertions.assertEquals
 import org.junit.jupiter.api.assertThrows
 import org.spekframework.spek2.Spek
@@ -59,6 +60,23 @@ object GrammarSpec : Spek({
             it("throws IllegalArgumentException") {
                 assertThrows<IllegalArgumentException> { instance.withRule(nonExistingSymbol, rule) }
             }
+        }
+    }
+
+    describe("#withModifier") {
+        val name by memoized { "capitalize" }
+        val modifier by memoized { CapitalizeModifier() }
+        val instance: Grammar by memoized()
+
+        it("returns the Grammar instance itself") {
+            assertEquals(instance, instance.withModifier(name, modifier))
+        }
+
+        it("adds the modifier to the Grammar, under the right name key") {
+            instance.withModifier(name, modifier)
+            val field = Grammar::class.java.getDeclaredField("modifiers")
+            field.trySetAccessible()
+            assertEquals(mapOf(name to modifier), field.get(instance) as Map<*, *>)
         }
     }
 

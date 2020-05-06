@@ -109,7 +109,6 @@ class Grammar(
      * @param modifier the [Modifier] instance to apply to the symbol when the modifier is called
      * @return the grammar instance itself
      */
-    @Suppress("unused")
     fun withModifier(name: String, modifier: Modifier): Grammar {
         modifiers[name] = modifier
         return this

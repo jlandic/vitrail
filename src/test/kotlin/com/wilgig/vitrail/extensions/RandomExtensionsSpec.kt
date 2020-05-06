@@ -1,3 +1,4 @@
+@file:Suppress("NAME_SHADOWING")
 package com.wilgig.vitrail.extensions
 
 import kotlin.random.Random
@@ -7,12 +8,11 @@ import org.spekframework.spek2.Spek
 import org.spekframework.spek2.style.specification.describe
 
 object RandomExtensionsSpec : Spek({
-    val random by memoized { Random }
+    val list by memoized { listOf<String>() }
 
     describe("#elementFromList") {
+        val random by memoized { Random(System.currentTimeMillis()) }
         context("with an empty list") {
-            val list by memoized { listOf<String>() }
-
             it("returns null") {
                 assertEquals(null, random.elementFromList(list))
             }
